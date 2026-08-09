@@ -26,4 +26,4 @@ The site is published from the `main` branch through GitHub Pages.
 
 ## CV
 
-The portfolio links to `Amin-Salimi-CV.pdf`. Replace that file with the final CV later while keeping the same filename, and no HTML changes will be required.
+The portfolio expects the CV file at `Amin-Salimi-CV.pdf`. Replace that file with the real CV later while keeping the same filename.

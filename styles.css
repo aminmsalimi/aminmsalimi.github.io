@@ -223,8 +223,8 @@ html[data-theme="light"] .theme-toggle .moon { display: none; }
   background: var(--accent-soft);
   filter: blur(6px);
 }
-.profile-top { display: flex; align-items: center; gap: 14px; position: relative; }
-.avatar { width: 54px; height: 54px; border-radius: 16px; object-fit: cover; border: 1px solid var(--line); }
+.profile-top { display: flex; align-items: center; gap: 18px; position: relative; }
+.avatar { width: 86px; height: 86px; border-radius: 22px; object-fit: cover; border: 1px solid var(--line); box-shadow: 0 8px 24px rgba(0,0,0,.10); flex: 0 0 auto; }
 .profile-name { font-weight: 700; letter-spacing: -.02em; }
 .profile-location { color: var(--muted); font-size: 12px; margin-top: 5px; }
 .terminal-line {
@@ -466,4 +466,58 @@ html[data-theme="light"] .theme-toggle .moon { display: none; }
 @media (max-width: 640px) {
   .toolbox-grid { grid-template-columns: 1fr; }
   .toolbox-card { min-height: auto; }
+}
+
+
+/* CV */
+.cv-section {
+  padding-top: 88px;
+  padding-bottom: 88px;
+}
+.cv-panel {
+  border: 1px solid var(--line);
+  border-radius: 26px;
+  padding: 34px;
+  background:
+    radial-gradient(circle at 90% 20%, var(--accent-soft), transparent 34%),
+    var(--surface);
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) auto;
+  gap: 40px;
+  align-items: center;
+  box-shadow: var(--shadow);
+}
+.cv-copy h2 {
+  font-family: "Manrope", sans-serif;
+  font-size: clamp(34px, 4vw, 58px);
+  line-height: 1.05;
+  letter-spacing: -0.05em;
+  margin: 0;
+}
+.cv-copy > p:last-child {
+  margin: 18px 0 0;
+  color: var(--muted);
+  line-height: 1.7;
+  max-width: 680px;
+  font-size: 14px;
+}
+.cv-actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+@media (max-width: 900px) {
+  .cv-panel { grid-template-columns: 1fr; gap: 26px; }
+  .cv-actions { justify-content: flex-start; }
+}
+
+@media (max-width: 640px) {
+  .avatar { width: 76px; height: 76px; border-radius: 20px; }
+  .profile-top { gap: 14px; }
+  .cv-section { padding-top: 70px; padding-bottom: 70px; }
+  .cv-panel { padding: 24px; border-radius: 22px; }
+  .cv-actions { display: grid; grid-template-columns: 1fr; }
+  .cv-actions .button { width: 100%; }
 }

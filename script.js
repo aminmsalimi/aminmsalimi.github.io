@@ -1,17 +1,14 @@
 const root = document.documentElement;
 const toggle = document.querySelector('.theme-toggle');
-const storedTheme = localStorage.getItem('amin-theme');
+const storedTheme = localStorage.getItem('amin-theme-v2');
 
-if (storedTheme === 'light' || storedTheme === 'dark') {
-  root.dataset.theme = storedTheme;
-} else if (window.matchMedia('(prefers-color-scheme: light)').matches) {
-  root.dataset.theme = 'light';
-}
+// Light mode is the site default. A visitor's manual choice is remembered afterwards.
+root.dataset.theme = (storedTheme === 'dark' || storedTheme === 'light') ? storedTheme : 'light';
 
 toggle?.addEventListener('click', () => {
   const next = root.dataset.theme === 'light' ? 'dark' : 'light';
   root.dataset.theme = next;
-  localStorage.setItem('amin-theme', next);
+  localStorage.setItem('amin-theme-v2', next);
 });
 
 document.getElementById('year').textContent = new Date().getFullYear();
