@@ -33,3 +33,27 @@ Project names are now clickable:
 - GPUNodeDiag → GitHub repository
 
 Added a minimal underline + arrow movement on hover/focus.
+
+
+## V5
+
+Added Certifications:
+- NVIDIA Certified Associate — AI Infrastructure & Operations
+- VMware Certified Professional — Data Center Virtualization 2022 (VCP-DCV 2022)
+- Azure Certification (generic title until the exact Azure credential name is supplied)
+
+Skills updated with:
+- VMware vSphere
+- VMware vCenter
+- VMware ESXi
+- Terraform
+
+
+## V6 — certification dates and order
+
+Certifications are sorted newest to oldest:
+
+1. NVIDIA Certified Associate — AI Infrastructure and Operations — February 2026
+2. Microsoft Certified: Azure Fundamentals (AZ-900) — February 2023
+3. VMware Certified Professional — Data Center Virtualization (VCP-DCV 2022) — October 2022
+4. Cisco CCNA and CCNP — September 2019
