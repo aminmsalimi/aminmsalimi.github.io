@@ -1,4 +1,4 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-<rect width="64" height="64" rx="15" fill="#111"/>
-<path d="M15 46 29 17h6l14 29h-8l-3-7H25l-3 7h-7Zm13-14h7l-3.5-8-3.5 8Z" fill="#fff"/>
+  <rect width="64" height="64" rx="14" fill="#111713"/>
+  <text x="32" y="39" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="22" font-weight="800" fill="#89d94c">AS</text>
 </svg>

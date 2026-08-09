@@ -1,32 +1,36 @@
-
 const root = document.documentElement;
-const themeButton = document.querySelector('[data-theme-toggle]');
-const storageKey = document.body.dataset.themeKey || 'amin-portfolio-theme';
+const themeButton = document.querySelector("[data-theme-toggle]");
+const themeKey = "amin-console-theme-v6";
 
-const saved = localStorage.getItem(storageKey);
-root.dataset.theme = saved === 'dark' ? 'dark' : 'light';
+const savedTheme = localStorage.getItem(themeKey);
+root.dataset.theme = savedTheme === "dark" ? "dark" : "light";
 
-themeButton?.addEventListener('click', () => {
-  const next = root.dataset.theme === 'light' ? 'dark' : 'light';
-  root.dataset.theme = next;
-  localStorage.setItem(storageKey, next);
+themeButton?.addEventListener("click", () => {
+  const nextTheme = root.dataset.theme === "dark" ? "light" : "dark";
+  root.dataset.theme = nextTheme;
+  localStorage.setItem(themeKey, nextTheme);
 });
 
-document.querySelectorAll('[data-year]').forEach(el => {
+document.querySelectorAll("[data-year]").forEach((el) => {
   el.textContent = new Date().getFullYear();
 });
 
-const items = document.querySelectorAll('[data-reveal]');
-if ('IntersectionObserver' in window) {
-  const io = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('is-visible');
-        io.unobserve(entry.target);
-      }
-    });
-  }, { threshold: .08 });
-  items.forEach(item => io.observe(item));
+const revealItems = document.querySelectorAll("[data-reveal]");
+
+if ("IntersectionObserver" in window) {
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-visible");
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.06 }
+  );
+
+  revealItems.forEach((item) => observer.observe(item));
 } else {
-  items.forEach(item => item.classList.add('is-visible'));
+  revealItems.forEach((item) => item.classList.add("is-visible"));
 }
