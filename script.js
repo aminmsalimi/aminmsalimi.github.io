@@ -1,29 +1,32 @@
+
 const root = document.documentElement;
-const toggle = document.querySelector('.theme-toggle');
-const storedTheme = localStorage.getItem('amin-theme-v2');
+const themeButton = document.querySelector('[data-theme-toggle]');
+const storageKey = document.body.dataset.themeKey || 'amin-portfolio-theme';
 
-// Light mode is the site default. A visitor's manual choice is remembered afterwards.
-root.dataset.theme = (storedTheme === 'dark' || storedTheme === 'light') ? storedTheme : 'light';
+const saved = localStorage.getItem(storageKey);
+root.dataset.theme = saved === 'dark' ? 'dark' : 'light';
 
-toggle?.addEventListener('click', () => {
+themeButton?.addEventListener('click', () => {
   const next = root.dataset.theme === 'light' ? 'dark' : 'light';
   root.dataset.theme = next;
-  localStorage.setItem('amin-theme-v2', next);
+  localStorage.setItem(storageKey, next);
 });
 
-document.getElementById('year').textContent = new Date().getFullYear();
+document.querySelectorAll('[data-year]').forEach(el => {
+  el.textContent = new Date().getFullYear();
+});
 
-const revealItems = document.querySelectorAll('.reveal');
+const items = document.querySelectorAll('[data-reveal]');
 if ('IntersectionObserver' in window) {
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
       if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-        observer.unobserve(entry.target);
+        entry.target.classList.add('is-visible');
+        io.unobserve(entry.target);
       }
     });
-  }, { threshold: 0.08 });
-  revealItems.forEach((item) => observer.observe(item));
+  }, { threshold: .08 });
+  items.forEach(item => io.observe(item));
 } else {
-  revealItems.forEach((item) => item.classList.add('visible'));
+  items.forEach(item => item.classList.add('is-visible'));
 }

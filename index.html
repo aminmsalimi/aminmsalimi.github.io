@@ -1,283 +1,202 @@
 <!doctype html>
 <html lang="en" data-theme="light">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Amin Salimi — Cloud & Infrastructure Engineer focused on Linux, Kubernetes, AWS, virtualization, NVIDIA GPU infrastructure, networking, and automation." />
-  <meta name="theme-color" content="#f5f6f2" />
-  <meta property="og:title" content="Amin Salimi — Cloud & Infrastructure Engineer" />
-  <meta property="og:description" content="Cloud, Linux, Kubernetes, virtualization, NVIDIA GPU infrastructure, networking, and automation." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://aminmsalimi.github.io/" />
-  <title>Amin Salimi — Cloud & Infrastructure Engineer</title>
-  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css" />
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Amin Salimi — Cloud & Infrastructure Engineer">
+<title>Amin Salimi / Ops Portfolio</title>
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="styles.css">
 </head>
-<body>
-  <div class="page-noise" aria-hidden="true"></div>
-
-  <header class="site-header">
-    <a class="brand" href="#top" aria-label="Amin Salimi home">
-      <span class="brand-dot"></span>
-      <span>Amin Salimi</span>
-    </a>
-
-    <nav class="nav" aria-label="Main navigation">
-      <a href="#work">Work</a>
-      <a href="#expertise">Expertise</a>
-      <a href="#toolbox">Toolbox</a>
-      <a href="#about">About</a>
-      <a href="#contact">Contact</a>
-      <a class="nav-cv" href="#cv">CV</a>
+<body data-theme-key="amin-console-theme">
+<div class="page-grid">
+  <aside class="rail">
+    <a class="monogram" href="#top">AS</a>
+    <nav>
+      <a href="#top"><span>00</span>Home</a>
+      <a href="#projects"><span>01</span>Projects</a>
+      <a href="#skills"><span>02</span>Skills</a>
+      <a href="#systems"><span>03</span>Systems</a>
+      <a href="#about"><span>04</span>About</a>
+      <a href="#contact"><span>05</span>Contact</a>
     </nav>
+    <div class="rail-bottom">
+      <a href="Amin-Salimi-CV.pdf" download>CV ↓</a>
+      <button data-theme-toggle aria-label="Toggle theme">◐</button>
+    </div>
+  </aside>
 
-    <button class="theme-toggle" type="button" aria-label="Toggle color theme" title="Toggle theme">
-      <svg class="sun" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3V1m0 22v-2M4.22 4.22 2.8 2.8m18.4 18.4-1.42-1.42M3 12H1m22 0h-2M4.22 19.78 2.8 21.2m18.4-18.4-1.42 1.42M17 12a5 5 0 1 1-10 0 5 5 0 0 1 10 0Z"/></svg>
-      <svg class="moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A8.5 8.5 0 1 1 11.2 3 6.8 6.8 0 0 0 21 12.8Z"/></svg>
-    </button>
-  </header>
+  <main>
+    <section id="top" class="hero">
+      <div class="hero-copy" data-reveal>
+        <div class="prompt"><span>amin@infra:~$</span> whoami</div>
+        <h1>Amin Salimi</h1>
+        <p class="job">Cloud & Infrastructure Engineer</p>
+        <p class="lede">Linux, Kubernetes, cloud, virtualization, networking, NVIDIA GPU infrastructure, and automation.</p>
 
-  <main id="top">
-    <section class="hero section-wrap">
-      <div class="hero-copy reveal">
-        <div class="eyebrow"><span class="status-dot"></span> Cloud · Platform · GPU Infrastructure</div>
-        <h1>Infrastructure that<br /><span class="muted-heading">stays understandable.</span></h1>
-        <p class="hero-lead">
-          I’m <strong>Amin Salimi</strong>, a Cloud & Infrastructure Engineer working across Linux,
-          Kubernetes, virtualization, AWS, networking, NVIDIA GPU systems, and automation.
-        </p>
-        <div class="hero-actions">
-          <a class="button primary" href="#work">See selected work</a>
-          <a class="button cv-button" href="Amin-Salimi-CV.pdf" download>Download CV ↓</a>
-          <a class="button ghost" href="https://github.com/aminmsalimi" target="_blank" rel="noreferrer">GitHub ↗</a>
-          <a class="button ghost" href="https://www.linkedin.com/in/amin-salimi-a9408298/" target="_blank" rel="noreferrer">LinkedIn ↗</a>
+        <div class="quick-actions">
+          <a class="accent" href="#projects">view_projects()</a>
+          <a href="Amin-Salimi-CV.pdf" download>download_cv()</a>
+          <a href="https://github.com/aminmsalimi" target="_blank" rel="noreferrer">github ↗</a>
+        </div>
+
+        <div class="system-summary">
+          <div><span>ROLE</span><strong>Infrastructure Engineering</strong></div>
+          <div><span>LOCATION</span><strong>Germany</strong></div>
+          <div><span>FOCUS</span><strong>GPU · Linux · Kubernetes</strong></div>
         </div>
       </div>
 
-      <aside class="profile-card reveal delay-1" aria-label="Profile summary">
-        <div class="profile-top">
-          <img src="https://github.com/aminmsalimi.png" alt="Amin Salimi" class="avatar" />
-          <div>
-            <div class="profile-name">Amin Salimi</div>
-            <div class="profile-location">Germany · Infrastructure Engineering</div>
-          </div>
+      <div class="hero-panel" data-reveal>
+        <div class="panel-head"><span>node://amin</span><span class="ok">● healthy</span></div>
+        <img src="profile.jpg" alt="Amin Salimi">
+        <div class="metrics">
+          <div><span>gpu.stack</span><strong>ready</strong></div>
+          <div><span>k8s.control</span><strong>ready</strong></div>
+          <div><span>linux.ops</span><strong>active</strong></div>
+          <div><span>automation</span><strong>python/bash</strong></div>
         </div>
-        <div class="terminal-line"><span>$</span> focus --current</div>
-        <div class="focus-list">
-          <span>NVIDIA GPU Infrastructure</span>
-          <span>Kubernetes & Linux</span>
-          <span>Cloud & Virtualization</span>
-          <span>Infrastructure Automation</span>
-        </div>
-        <div class="availability"><span></span> Building practical infrastructure tools</div>
-      </aside>
-    </section>
-
-    <section class="marquee-wrap" aria-label="Technologies">
-      <div class="marquee">
-        <span>LINUX</span><i>•</i><span>KUBERNETES</span><i>•</i><span>AWS</span><i>•</i><span>PROXMOX</span><i>•</i><span>NVIDIA GPU</span><i>•</i><span>PYTHON</span><i>•</i><span>BASH</span><i>•</i><span>NETWORKING</span>
       </div>
     </section>
 
-    <section id="work" class="section-wrap section-block">
-      <div class="section-head reveal">
-        <div>
-          <p class="section-kicker">01 / Selected work</p>
-          <h2>Projects built around real operations.</h2>
-        </div>
-        <p class="section-note">Public tools, work in development, and generalized hands-on infrastructure work.</p>
+    <section class="logline">
+      <span>FOCUS</span>
+      <code>Practical infrastructure, GPU systems, and operator tooling.</code>
+      <span class="ok">ACTIVE</span>
+    </section>
+
+    <section id="projects" class="module">
+      <div class="module-head" data-reveal>
+        <div><span>01 / PROJECTS</span><h2>Operator tooling.</h2></div>
+        <p>Two public tools focused on NVIDIA GPU infrastructure and day-to-day operations.</p>
       </div>
 
       <div class="project-grid">
-        <a class="project-card featured reveal" href="https://github.com/aminmsalimi/migops" target="_blank" rel="noreferrer">
-          <div class="project-meta">
-            <span class="project-index">01</span>
-            <span class="project-state live">Public</span>
-          </div>
-          <div class="project-body">
-            <p class="project-type">NVIDIA MIG · Python CLI</p>
-            <h3>MIGOps</h3>
-            <p>Safer planning, validation, lifecycle operations, and troubleshooting for NVIDIA Multi-Instance GPU environments.</p>
-          </div>
-          <div class="project-footer">
-            <div class="tag-row"><span>Python</span><span>NVIDIA MIG</span><span>Linux</span><span>CLI</span></div>
-            <span class="arrow">↗</span>
-          </div>
-        </a>
-
-        <article class="project-card reveal delay-1">
-          <div class="project-meta">
-            <span class="project-index">02</span>
-            <span class="project-state">In development</span>
-          </div>
-          <div class="project-body">
-            <p class="project-type">GPU diagnostics · Linux</p>
-            <h3>GPUDiag</h3>
-            <p>A practical GPU node diagnostics toolkit for health, telemetry, error detection, GPU fabric status, and operator-friendly reports.</p>
-          </div>
-          <div class="project-footer">
-            <div class="tag-row"><span>NVML</span><span>DCGM</span><span>nvidia-smi</span><span>Linux</span></div>
-            <span class="arrow muted-arrow">→</span>
-          </div>
+        <article class="project-card" data-reveal>
+          <div class="project-status"><span class="ok">● public</span><span>mig / lifecycle</span></div>
+          <h3>MIGOps</h3>
+          <p>Safe NVIDIA MIG operations with workload-aware checks, profile discovery, planning, snapshots, drift detection, and dry-run/apply workflows.</p>
+          <pre><span>$</span> migops status
+<span>$</span> migops recommend gpu 0 4
+<span>$</span> sudo migops split gpu 0 4 --yes</pre>
+          <a href="https://github.com/aminmsalimi/migops" target="_blank" rel="noreferrer">open repository ↗</a>
         </article>
 
-        <article class="project-card reveal">
-          <div class="project-meta">
-            <span class="project-index">03</span>
-            <span class="project-state">Hands-on labs</span>
-          </div>
-          <div class="project-body">
-            <p class="project-type">Kubernetes · Systems</p>
-            <h3>Infrastructure Labs</h3>
-            <p>Cluster deployment, workload orchestration, networking, scaling, troubleshooting, and reliability exercises across Linux and Kubernetes environments.</p>
-          </div>
-          <div class="project-footer">
-            <div class="tag-row"><span>Kubernetes</span><span>K3s</span><span>Docker</span><span>Linux</span></div>
-            <span class="arrow muted-arrow">→</span>
-          </div>
-        </article>
-
-        <article class="project-card reveal delay-1">
-          <div class="project-meta">
-            <span class="project-index">04</span>
-            <span class="project-state">Operations</span>
-          </div>
-          <div class="project-body">
-            <p class="project-type">Automation · Systems</p>
-            <h3>Infrastructure Operations</h3>
-            <p>Reusable Python and Bash automation for services, storage, RAID/LVM, system inventory, health checks, networking, and repeatable operational workflows.</p>
-          </div>
-          <div class="project-footer">
-            <div class="tag-row"><span>Python</span><span>Bash</span><span>RAID/LVM</span><span>Ops</span></div>
-            <span class="arrow muted-arrow">→</span>
-          </div>
+        <article class="project-card" data-reveal>
+          <div class="project-status"><span class="ok">● public</span><span>gpu / diagnostics</span></div>
+          <h3>GPUNodeDiag</h3>
+          <p>GPU node diagnostics across telemetry, PCIe, ECC/Xid, NVLink, Fabric Manager, DCGM, CUDA, containers, MIG, and Kubernetes GPU resources.</p>
+          <pre><span>$</span> gdiag
+<span>$</span> gdiag stack
+<span>$</span> gdiag report -o gpu-report.html</pre>
+          <a href="https://github.com/aminmsalimi/gpu-node-diag" target="_blank" rel="noreferrer">open repository ↗</a>
         </article>
       </div>
     </section>
 
-    <section id="expertise" class="section-wrap section-block">
-      <div class="section-head reveal">
-        <div>
-          <p class="section-kicker">02 / Expertise</p>
-          <h2>Infrastructure, end to end.</h2>
-        </div>
+
+    <section id="skills" class="module skills-module">
+      <div class="module-head" data-reveal>
+        <div><span>02 / SKILLS</span><h2>Core skills.</h2></div>
+        <p>The areas I work with most often.</p>
       </div>
 
-      <div class="expertise-grid reveal">
-        <div class="expertise-item">
-          <span class="expertise-number">01</span>
-          <h3>GPU & AI Infrastructure</h3>
-          <p>NVIDIA GPU operations, drivers, CUDA, MIG, GPU passthrough, health checks, observability, diagnostics, and AI/HPC infrastructure.</p>
+      <div class="skills-list" data-reveal>
+        <div class="skill-row">
+          <span class="skill-no">01</span>
+          <strong>Linux Systems</strong>
+          <p>Ubuntu, systemd, services, logs, RAID, LVM, storage, troubleshooting.</p>
         </div>
-        <div class="expertise-item">
-          <span class="expertise-number">02</span>
-          <h3>Cloud & Platform</h3>
-          <p>AWS infrastructure, EC2, IAM, Kubernetes, containers, automation, operational tooling, and platform reliability.</p>
+
+        <div class="skill-row">
+          <span class="skill-no">02</span>
+          <strong>Kubernetes & Containers</strong>
+          <p>Kubernetes, K3s, Docker, Rancher, workloads, networking, cluster operations.</p>
         </div>
-        <div class="expertise-item">
-          <span class="expertise-number">03</span>
-          <h3>Linux & Virtualization</h3>
-          <p>Linux systems, Proxmox, VMware, private cloud, virtual machines, storage, RAID/LVM, server troubleshooting, and lifecycle operations.</p>
+
+        <div class="skill-row">
+          <span class="skill-no">03</span>
+          <strong>NVIDIA GPU Infrastructure</strong>
+          <p>CUDA, MIG, NVML, DCGM, Fabric Manager, GPU passthrough, diagnostics.</p>
         </div>
-        <div class="expertise-item">
-          <span class="expertise-number">04</span>
-          <h3>Networking & Edge</h3>
-          <p>Infrastructure networking, VLANs, edge systems, 5G environments, latency/QoS testing, and practical connectivity troubleshooting.</p>
+
+        <div class="skill-row">
+          <span class="skill-no">04</span>
+          <strong>Cloud & Virtualization</strong>
+          <p>AWS, EC2, IAM, Proxmox, VMware, OpenStack, OpenNebula.</p>
         </div>
-        <div class="expertise-item">
-          <span class="expertise-number">05</span>
-          <h3>Enterprise Hardware</h3>
-          <p>Dell and HPE server environments, hardware-aware troubleshooting, storage, GPU hosts, and infrastructure lifecycle work.</p>
+
+        <div class="skill-row">
+          <span class="skill-no">05</span>
+          <strong>Automation</strong>
+          <p>Python, Bash, Git, YAML, repeatable operational workflows.</p>
+        </div>
+
+        <div class="skill-row">
+          <span class="skill-no">06</span>
+          <strong>Networking & Edge</strong>
+          <p>TCP/IP, VLANs, 5G, QoS, latency testing, edge connectivity.</p>
+        </div>
+
+        <div class="skill-row">
+          <span class="skill-no">07</span>
+          <strong>Enterprise Hardware</strong>
+          <p>Dell PowerEdge, HPE servers, GPU hosts, storage and infrastructure validation.</p>
         </div>
       </div>
     </section>
 
-    <section id="toolbox" class="section-wrap section-block">
-      <div class="section-head reveal">
-        <div>
-          <p class="section-kicker">03 / Toolbox</p>
-          <h2>Tools I work with.</h2>
-        </div>
-        <p class="section-note">A practical stack rather than a wall of logos.</p>
+    <section id="systems" class="module">
+      <div class="module-head" data-reveal>
+        <div><span>03 / SYSTEMS</span><h2>What I work with.</h2></div>
+        <p>Platforms and infrastructure I work with.</p>
       </div>
 
-      <div class="toolbox-grid reveal">
-        <div class="toolbox-card"><span>Systems & Automation</span><p>Linux · Ubuntu · Windows · Python · Bash · Git · YAML</p></div>
-        <div class="toolbox-card"><span>Cloud</span><p>AWS · EC2 · IAM</p></div>
-        <div class="toolbox-card"><span>Containers</span><p>Docker · Kubernetes · K3s · Rancher</p></div>
-        <div class="toolbox-card"><span>Virtualization & Private Cloud</span><p>Proxmox · VMware · OpenStack · OpenNebula</p></div>
-        <div class="toolbox-card"><span>GPU Infrastructure</span><p>NVIDIA GPU · CUDA · MIG · GPU passthrough · NVML · DCGM</p></div>
-        <div class="toolbox-card"><span>Servers, Storage & Network</span><p>Dell · HPE · RAID · LVM · TCP/IP · VLAN · 5G · Edge · QoS</p></div>
+      <div class="checks" data-reveal>
+        <div><span class="check">✓</span><strong>Linux & storage</strong><p>Ubuntu, systemd, RAID, LVM, services, recovery, performance.</p></div>
+        <div><span class="check">✓</span><strong>Kubernetes</strong><p>Docker, Kubernetes, K3s, Rancher, workloads, cluster troubleshooting.</p></div>
+        <div><span class="check">✓</span><strong>Virtualization</strong><p>Proxmox, VMware, OpenStack, OpenNebula, GPU passthrough.</p></div>
+        <div><span class="check">✓</span><strong>GPU infrastructure</strong><p>NVIDIA, CUDA, MIG, NVML, DCGM, Fabric Manager, diagnostics.</p></div>
+        <div><span class="check">✓</span><strong>Cloud & automation</strong><p>AWS, EC2, IAM, Python, Bash, Git, repeatable operations.</p></div>
+        <div><span class="check">✓</span><strong>Network & edge</strong><p>TCP/IP, VLAN, 5G, QoS, latency, edge connectivity.</p></div>
       </div>
     </section>
 
-    <section id="about" class="section-wrap section-block about-grid">
-      <div class="about-title reveal">
-        <p class="section-kicker">04 / About</p>
-        <h2>I like infrastructure that is observable, repeatable, and boring in production.</h2>
+    <section id="about" class="module about">
+      <div class="module-head" data-reveal>
+        <div><span>04 / ABOUT</span><h2>Make systems easier to operate.</h2></div>
       </div>
-      <div class="about-copy reveal delay-1">
-        <p>
-          I work across on-premises, cloud, edge, and containerized environments, where the job is often a mix of building, operating, troubleshooting, and improving systems.
-        </p>
-        <p>
-          My work sits between systems administration, cloud/platform engineering, and GPU infrastructure. I enjoy diagnosing complex systems, automating repetitive tasks, and turning operational knowledge into small tools and documented workflows.
-        </p>
-        <p>
-          The goal is simple: understand what the system is doing, make changes safely, and leave the environment easier to operate than before.
-        </p>
+      <div class="about-terminal" data-reveal>
+        <div class="panel-head"><span>notes.txt</span><span>read-only</span></div>
+        <p>Most of my work is hands-on: deploying systems, troubleshooting issues, maintaining infrastructure, and automating repetitive tasks.</p>
+        <p>I spend most of my time around Linux, Kubernetes, GPU infrastructure, virtualization, and the tooling needed to keep those systems understandable and reliable.</p>
       </div>
     </section>
 
-    <section id="cv" class="section-wrap section-block cv-section reveal">
-      <div class="cv-panel">
-        <div class="cv-copy">
-          <p class="section-kicker">05 / Curriculum Vitae</p>
-          <h2>Want the concise version?</h2>
-          <p>Download my CV as a PDF for a compact overview of my infrastructure experience, technical focus, and certifications.</p>
-        </div>
-        <div class="cv-actions">
-          <a class="button primary" href="Amin-Salimi-CV.pdf" target="_blank" rel="noreferrer">View CV ↗</a>
-          <a class="button cv-button" href="Amin-Salimi-CV.pdf" download>Download CV ↓</a>
-        </div>
+    <section class="cv-card" data-reveal>
+      <div>
+        <span>DOCUMENT / CV</span>
+        <h2>A shorter version of the story.</h2>
+      </div>
+      <div class="cv-buttons">
+        <a href="Amin-Salimi-CV.pdf" target="_blank" rel="noreferrer">open.pdf ↗</a>
+        <a class="accent" href="Amin-Salimi-CV.pdf" download>download.pdf ↓</a>
       </div>
     </section>
 
-    <section class="section-wrap cert-strip reveal" aria-label="Certifications">
-      <div class="cert-label">Certifications</div>
-      <div class="cert-list">
-        <div>
-          <span>NVIDIA Certified Associate</span>
-          <strong>AI Infrastructure & Operations</strong>
-        </div>
-        <div>
-          <span>VMware Certified Professional</span>
-          <strong>Data Center Virtualization 2022</strong>
-        </div>
+    <section id="contact" class="module contact">
+      <span>05 / CONTACT</span>
+      <h2>amin@infra:~$ <b>contact</b><span class="cursor">_</span></h2>
+      <div class="links">
+        <a href="https://github.com/aminmsalimi" target="_blank" rel="noreferrer">github ↗</a>
+        <a href="https://www.linkedin.com/in/amin-salimi-a9408298/" target="_blank" rel="noreferrer">linkedin ↗</a>
+        <a href="mailto:inbox.salimi@gmail.com">email ↗</a>
       </div>
     </section>
 
-    <section id="contact" class="section-wrap section-block contact-section reveal">
-      <p class="section-kicker">06 / Contact</p>
-      <h2>Let’s build infrastructure<br />that behaves itself.</h2>
-      <p>For projects, collaboration, or infrastructure conversations, you can reach me through GitHub, LinkedIn, or email.</p>
-      <div class="contact-links">
-        <a class="button primary" href="https://github.com/aminmsalimi" target="_blank" rel="noreferrer">GitHub ↗</a>
-        <a class="button ghost" href="https://www.linkedin.com/in/amin-salimi-a9408298/" target="_blank" rel="noreferrer">LinkedIn ↗</a>
-        <a class="button ghost" href="mailto:inbox.salimi@gmail.com">Email</a>
-        <a class="button cv-button" href="Amin-Salimi-CV.pdf" download>Download CV ↓</a>
-      </div>
-    </section>
+    <footer><span>© <span data-year></span> Amin Salimi</span><span>exit 0</span></footer>
   </main>
-
-  <footer class="site-footer section-wrap">
-    <span>© <span id="year"></span> Amin Salimi</span>
-    <span>Built for GitHub Pages · <a href="#top">Back to top ↑</a></span>
-  </footer>
-
-  <script src="script.js"></script>
+</div>
+<script src="script.js"></script>
 </body>
 </html>
