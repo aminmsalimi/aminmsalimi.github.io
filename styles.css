@@ -101,6 +101,26 @@ button, a { -webkit-tap-highlight-color: transparent; }
 }
 .nav a:hover { color: var(--text); }
 
+.nav .nav-cv {
+  color: var(--text);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 8px 11px;
+  background: var(--surface);
+}
+.nav .nav-cv:hover { border-color: var(--accent); color: var(--accent); }
+
+.button.cv-button {
+  background: var(--surface);
+  color: var(--text);
+  border-color: color-mix(in srgb, var(--accent) 42%, var(--line));
+  box-shadow: inset 0 0 0 1px var(--accent-soft);
+}
+.button.cv-button:hover {
+  border-color: var(--accent);
+  background: var(--accent-soft);
+}
+
 .theme-toggle {
   justify-self: end;
   width: 38px;
