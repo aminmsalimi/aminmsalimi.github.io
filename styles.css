@@ -6,9 +6,9 @@ html[data-theme="dark"]{--bg:#0d110e;--panel:#121713;--ink:#eef4ee;--muted:#98a4
 .rail-bottom{margin-top:auto;display:flex;gap:8px}.rail-bottom a,.rail-bottom button{border:1px solid var(--line);background:var(--panel);color:var(--ink);padding:9px 11px;font:inherit;font-size:10px;cursor:pointer}
 main{padding:0 44px}.hero{min-height:710px;display:grid;grid-template-columns:1.2fr .8fr;gap:55px;align-items:center;border-bottom:1px solid var(--line)}.prompt{font-size:12px;color:var(--muted);margin-bottom:24px}.prompt span{color:var(--green);font-weight:700}.hero h1{font-family:Arial,Helvetica,sans-serif;font-size:clamp(74px,9vw,130px);letter-spacing:-.075em;line-height:.86;margin:0}.job{font-family:Arial,Helvetica,sans-serif;font-size:clamp(26px,3vw,40px);font-weight:700;letter-spacing:-.04em;margin:25px 0 0}.lede{font-family:Arial,Helvetica,sans-serif;font-size:17px;line-height:1.65;color:var(--muted);max-width:690px}
 .quick-actions{display:flex;flex-wrap:wrap;gap:9px;margin-top:30px}.quick-actions a,.cv-buttons a{border:1px solid var(--line);background:var(--panel);padding:12px 14px;font-size:11px}.quick-actions .accent,.cv-buttons .accent{background:var(--green);color:#0b1607;border-color:var(--green);font-weight:800}
-.system-summary{display:grid;grid-template-columns:repeat(3,1fr);margin-top:42px;border:1px solid var(--line);background:var(--panel)}.system-summary div{padding:16px}.system-summary div+div{border-left:1px solid var(--line)}.system-summary span{font-size:8px;color:var(--muted);display:block;margin-bottom:6px}.system-summary strong{font-size:10px}
+
 .hero-panel{border:1px solid var(--line);background:var(--panel);box-shadow:0 18px 45px rgba(20,30,22,.07)}.panel-head{height:40px;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;padding:0 13px;font-size:9px;color:var(--muted)}.ok{color:var(--green)}.hero-panel img{width:100%;aspect-ratio:1/1;object-fit:cover;display:block}.metrics{display:grid;grid-template-columns:1fr 1fr}.metrics div{padding:13px;border-top:1px solid var(--line);font-size:9px}.metrics div:nth-child(even){border-left:1px solid var(--line)}.metrics span{display:block;color:var(--muted);margin-bottom:5px}.metrics strong{font-size:9px}
-.logline{display:grid;grid-template-columns:80px 1fr 80px;gap:20px;padding:16px 0;border-bottom:1px solid var(--line);font-size:9px}.logline code{color:var(--muted)}
+
 .module{padding:105px 0;border-bottom:1px solid var(--line)}.module-head{display:grid;grid-template-columns:1.2fr .8fr;gap:50px;align-items:end;margin-bottom:44px}.module-head span,.contact>span,.cv-card span{font-size:9px;color:var(--green);font-weight:800}.module-head h2,.contact h2,.cv-card h2{font-family:Arial,Helvetica,sans-serif;font-size:clamp(44px,5.5vw,78px);letter-spacing:-.06em;line-height:.96;margin:12px 0 0}.module-head p{font-family:Arial,Helvetica,sans-serif;color:var(--muted);line-height:1.6;margin:0}
 .project-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}.project-card{border:1px solid var(--line);background:var(--panel);padding:28px}.project-status{display:flex;justify-content:space-between;font-size:9px;color:var(--muted)}.project-card h3{font-family:Arial,Helvetica,sans-serif;font-size:42px;letter-spacing:-.05em;margin:38px 0 12px}.project-card p{font-family:Arial,Helvetica,sans-serif;color:var(--muted);line-height:1.6;min-height:118px}.project-card pre{background:#101511;color:#dce9dc;padding:17px;overflow:auto;line-height:1.6;font-size:10px;margin:25px 0}.project-card pre span{color:#78d33f}.project-card>a{font-size:10px;border-bottom:1px solid var(--ink);padding-bottom:3px;font-weight:800}
 .checks{display:grid;grid-template-columns:1fr 1fr;border:1px solid var(--line);background:var(--panel)}.checks>div{display:grid;grid-template-columns:34px 180px 1fr;gap:14px;padding:22px;border-bottom:1px solid var(--line)}.checks>div:nth-child(odd){border-right:1px solid var(--line)}.checks>div:nth-last-child(-n+2){border-bottom:0}.check{color:var(--green);font-weight:900}.checks strong{font-size:11px}.checks p{font-family:Arial,Helvetica,sans-serif;color:var(--muted);font-size:12px;line-height:1.5;margin:0}
@@ -18,20 +18,164 @@ main{padding:0 44px}.hero{min-height:710px;display:grid;grid-template-columns:1.
 footer{height:74px;display:flex;justify-content:space-between;align-items:center;color:var(--muted);font-size:9px}
 [data-reveal]{opacity:0;transform:translateY(14px);transition:.6s ease}[data-reveal].is-visible{opacity:1;transform:none}
 @media(max-width:1000px){.page-grid{grid-template-columns:1fr}.rail{height:auto;position:sticky;z-index:10;top:0;display:grid;grid-template-columns:auto 1fr auto;align-items:center;border-right:0;border-bottom:1px solid var(--line);padding:10px 18px}.monogram{width:38px;height:38px;margin:0}.rail nav{display:none}.rail-bottom{margin:0}.hero{grid-template-columns:1fr;padding:60px 0}.hero-panel{max-width:520px}.module-head{grid-template-columns:1fr}.project-grid{grid-template-columns:1fr}.checks{grid-template-columns:1fr}.checks>div:nth-child(odd){border-right:0}.checks>div:nth-last-child(-n+2){border-bottom:1px solid var(--line)}.checks>div:last-child{border-bottom:0}.cv-card{flex-direction:column;align-items:flex-start}}
-@media(max-width:650px){main{padding:0 16px}.hero h1{font-size:72px}.system-summary{grid-template-columns:1fr}.system-summary div+div{border-left:0;border-top:1px solid var(--line)}.checks>div{grid-template-columns:28px 1fr}.checks p{grid-column:2}.cv-buttons{width:100%;flex-direction:column}.contact h2{font-size:42px}.links{flex-wrap:wrap}}
+@media(max-width:650px){main{padding:0 16px}.hero h1{font-size:72px}.checks>div{grid-template-columns:28px 1fr}.checks p{grid-column:2}.cv-buttons{width:100%;flex-direction:column}.contact h2{font-size:42px}.links{flex-wrap:wrap}}
 
 
-/* Skills extension — keeps the original Ops Console visual style */
-.skills-checks > div:nth-last-child(-n+2) {
-  border-bottom: 0;
+/* Common refinements for the updated portfolio */
+@media(max-width:1000px){
+  .checks > div:nth-last-child(-n+2){border-bottom:1px solid var(--line)}
+  .checks > div:last-child{border-bottom:0}
+}
+
+
+/* Current-role model */
+
+.role-module{
+  margin-top:28px;
+  border:1px solid var(--line);
+  background:var(--panel);
+}
+.role-module-head{
+  min-height:31px;
+  padding:0 11px;
+  border-bottom:1px solid var(--line);
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  color:var(--muted);
+  font-size:8px;
+}
+.role-online{
+  display:inline-flex;
+  align-items:center;
+  gap:5px;
+  color:var(--green);
+}
+.role-online i{
+  width:6px;height:6px;border-radius:50%;background:var(--green);display:inline-block;
+}
+.role-module-body{display:grid;grid-template-columns:1fr 1.55fr .75fr}
+.role-module-body>div{padding:11px 12px}
+.role-module-body>div+div{border-left:1px solid var(--line)}
+.role-module-body span{
+  display:block;
+  margin-bottom:4px;
+  color:var(--muted);
+  font-size:8px;
+}
+.role-module-body strong{
+  font-family:Arial,Helvetica,sans-serif;
+  font-size:12px;
+}
+@media(max-width:650px){
+  .role-module-body{grid-template-columns:1fr}
+  .role-module-body>div+div{border-left:0;border-top:1px solid var(--line)}
+}
+
+
+/* V2 employment module refinements */
+.role-module {
+  margin-bottom: 34px;
+}
+
+.role-module-body > div:nth-child(3) {
+  border-left: 1px solid var(--line);
+}
+
+@media(max-width:650px) {
+  .role-module-body > div:nth-child(3) {
+    border-left: 0;
+  }
+}
+
+
+/* ---------- V3 final hero cleanup ---------- */
+
+/* With the extra focus strip removed, the hero can be a little tighter. */
+.hero {
+  min-height: 680px;
+  grid-template-columns: minmax(0, 1.28fr) minmax(330px, .72fr);
+  gap: 50px;
+  align-items: center;
+}
+
+/* Keep the photo/status panel visually subordinate to the main introduction. */
+.hero-panel {
+  width: 100%;
+  max-width: 440px;
+  justify-self: end;
+  border: 1px solid var(--line);
+  box-shadow: none;
+  background: var(--panel);
+}
+
+.hero-panel .panel-head {
+  height: 36px;
+  padding: 0 12px;
+}
+
+/* Preserve the portrait itself, only reduce the overall panel footprint. */
+.hero-panel img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+.hero-panel .metrics div {
+  padding: 11px 12px;
+}
+
+/* Employment module now finishes the left side cleanly. */
+.role-module {
+  margin-top: 28px;
+  margin-bottom: 0;
+}
+
+/* Projects follow the hero directly with consistent spacing. */
+#projects {
+  padding-top: 92px;
+}
+
+/* Slightly calmer vertical rhythm across the rest of the page. */
+.module {
+  padding-top: 96px;
+  padding-bottom: 96px;
+}
+
+.module-head {
+  margin-bottom: 40px;
 }
 
 @media(max-width:1000px) {
-  .skills-checks > div:nth-last-child(-n+2) {
-    border-bottom: 1px solid var(--line);
+  .hero {
+    grid-template-columns: 1fr;
+    gap: 42px;
+    min-height: 0;
+    padding: 58px 0 64px;
   }
 
-  .skills-checks > div:last-child {
-    border-bottom: 0;
+  .hero-panel {
+    width: min(100%, 460px);
+    max-width: 460px;
+    justify-self: start;
+  }
+
+  #projects {
+    padding-top: 82px;
+  }
+}
+
+@media(max-width:650px) {
+  .hero-panel {
+    width: 100%;
+    max-width: 430px;
+  }
+
+  .module,
+  #projects {
+    padding-top: 72px;
+    padding-bottom: 72px;
   }
 }

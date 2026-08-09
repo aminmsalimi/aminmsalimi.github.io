@@ -1,24 +1,23 @@
-# Amin Salimi — Ops Console
+# Ops Console — Status Module V3
 
-This version intentionally matches the original Ops Console layout shown in the reference screenshot.
+Final cleanup of the selected Status Module design.
 
-Kept:
-- same left sidebar
-- same hero proportions
-- same large photo size
-- same profile/status panel
-- same light default theme
-- same green terminal accent
-- same project-card layout
+Changes:
+- Removed the complete `FOCUS ... ACTIVE` strip.
+- Projects now start directly after the hero.
+- Kept `01 / PROJECTS`.
+- Made the portrait/status panel slightly smaller and better aligned.
+- Removed the portrait-panel drop shadow for a more consistent Ops Console look.
+- Tightened panel header and metric spacing.
+- Kept the portrait crop and overall visual identity.
+- Kept the employment module:
+  - Research Associate
+  - Fachhochschule Dortmund
+  - Germany
+- Kept Skills, About, CV and Contact.
+- Light mode remains the default.
 
-Updated:
-- AI Infrastructure & Systems Engineer positioning
-- AI infrastructure-focused Skills section
-- MIGOps + GPUNodeDiag
-- `download_cv` button has no parentheses
-- CV remains replaceable via `Amin-Salimi-CV.pdf`
-
-## Preview
+## Preview locally
 
 ```powershell
 python -m http.server 8000
