@@ -21,123 +21,17 @@ footer{height:74px;display:flex;justify-content:space-between;align-items:center
 @media(max-width:650px){main{padding:0 16px}.hero h1{font-size:72px}.system-summary{grid-template-columns:1fr}.system-summary div+div{border-left:0;border-top:1px solid var(--line)}.checks>div{grid-template-columns:28px 1fr}.checks p{grid-column:2}.cv-buttons{width:100%;flex-direction:column}.contact h2{font-size:42px}.links{flex-wrap:wrap}}
 
 
-/* ---- Minimal refinement ---- */
-.rail {
-  background: var(--bg);
+/* Skills extension — keeps the original Ops Console visual style */
+.skills-checks > div:nth-last-child(-n+2) {
+  border-bottom: 0;
 }
 
-.hero,
-.module {
-  border-bottom-color: color-mix(in srgb, var(--line) 78%, transparent);
-}
-
-.hero-panel,
-.project-card,
-.about-terminal {
-  box-shadow: none;
-}
-
-.hero-panel,
-.project-card,
-.about-terminal,
-.checks {
-  border-color: color-mix(in srgb, var(--line) 86%, transparent);
-}
-
-.quick-actions a,
-.cv-buttons a,
-.links a {
-  border-radius: 6px;
-}
-
-.system-summary {
-  border-left: 0;
-  border-right: 0;
-}
-
-.project-card {
-  padding: 26px;
-}
-
-.project-card h3 {
-  margin-top: 30px;
-}
-
-.project-card pre {
-  border-radius: 6px;
-}
-
-.module {
-  padding: 92px 0;
-}
-
-.module-head {
-  margin-bottom: 36px;
-}
-
-.module-head h2 {
-  font-size: clamp(40px, 5vw, 68px);
-}
-
-/* Skills: intentionally plain and easy to scan */
-.skills-list {
-  border-top: 1px solid var(--line);
-}
-
-.skill-row {
-  display: grid;
-  grid-template-columns: 48px minmax(190px, 240px) 1fr;
-  gap: 18px;
-  align-items: start;
-  padding: 20px 0;
-  border-bottom: 1px solid var(--line);
-}
-
-.skill-no {
-  color: var(--green);
-  font-size: 9px;
-  font-weight: 800;
-}
-
-.skill-row strong {
-  font-size: 11px;
-}
-
-.skill-row p {
-  margin: 0;
-  color: var(--muted);
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 13px;
-  line-height: 1.55;
-}
-
-/* Make the systems section lighter so Skills does the heavy lifting */
-.checks {
-  background: transparent;
-  border-left: 0;
-  border-right: 0;
-}
-
-.checks > div {
-  padding: 18px 0;
-  border-left: 0 !important;
-  border-right: 0 !important;
-}
-
-.cv-card {
-  margin: 66px 0;
-  padding: 34px;
-}
-
-.cv-card h2 {
-  font-size: 46px;
-}
-
-@media(max-width:650px){
-  .skill-row{
-    grid-template-columns: 30px 1fr;
+@media(max-width:1000px) {
+  .skills-checks > div:nth-last-child(-n+2) {
+    border-bottom: 1px solid var(--line);
   }
-  .skill-row p{
-    grid-column: 2;
+
+  .skills-checks > div:last-child {
+    border-bottom: 0;
   }
 }
