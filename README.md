@@ -24,3 +24,12 @@ python -m http.server 8000
 ```
 
 Open `http://localhost:8000`.
+
+
+## V4
+
+Project names are now clickable:
+- MIGOps → GitHub repository
+- GPUNodeDiag → GitHub repository
+
+Added a minimal underline + arrow movement on hover/focus.
