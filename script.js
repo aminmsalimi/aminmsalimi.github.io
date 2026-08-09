@@ -30,16 +30,3 @@ if ('IntersectionObserver' in window) {
 } else {
   revealItems.forEach((item) => item.classList.add('visible'));
 }
-
-const copyButton = document.querySelector('.copy-link');
-const toast = document.querySelector('.toast');
-copyButton?.addEventListener('click', async () => {
-  try {
-    await navigator.clipboard.writeText(copyButton.dataset.copy);
-    toast.textContent = 'Site URL copied';
-  } catch {
-    toast.textContent = copyButton.dataset.copy;
-  }
-  toast.classList.add('show');
-  window.setTimeout(() => toast.classList.remove('show'), 1800);
-});

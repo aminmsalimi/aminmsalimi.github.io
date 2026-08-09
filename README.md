@@ -1,23 +1,24 @@
 # aminmsalimi.github.io
 
-Personal portfolio site for **Amin Salimi**.
+Personal portfolio website for **Amin Salimi**, built as a lightweight static site for GitHub Pages.
 
-## Publish with GitHub Pages
+## Stack
 
-1. Create a public repository named exactly `aminmsalimi.github.io`.
-2. Copy these files into the repository root.
-3. Commit and push to the `main` branch.
-4. Open **Settings → Pages**.
-5. Under **Build and deployment**, choose **Deploy from a branch**.
-6. Select **main** and **/(root)**, then Save.
+- HTML
+- CSS
+- Vanilla JavaScript
+- GitHub Pages
 
-Your site will be available at `https://aminmsalimi.github.io`.
+## Local preview
 
-## Edit content
+Open `index.html` directly, or run a local static server from the repository root.
 
-- Main content: `index.html`
-- Visual design: `styles.css`
-- Theme toggle / reveal animation: `script.js`
-- Browser icon: `favicon.svg`
+```bash
+python -m http.server 8000
+```
 
-No build step or framework is required.
+Then open `http://localhost:8000`.
+
+## Deployment
+
+The site is published from the `main` branch through GitHub Pages.
